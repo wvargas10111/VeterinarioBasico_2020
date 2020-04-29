@@ -48,7 +48,7 @@ namespace VeterinarioBasico_2020
         {
            
             string myHash = BCrypt.Net.BCrypt.HashPassword(textBoxUserName.Text, BCrypt.Net.BCrypt.GenerateSalt());
-            MessageBox.Show(conexion.addUser(textBoxName.Text, textBoxLastName.Text, textBoxUserName.Text, textBoxAddress.Text, textBoxPhone.Text, textBoxDni.Text, textBoxDate.Text, textBoxPass.Text myHash));
+            MessageBox.Show(conexion.addUser(textBoxName.Text, textBoxLastName.Text, textBoxUserName.Text, textBoxAddress.Text, textBoxPhone.Text, textBoxDni.Text, textBoxDate.Text, textBoxPass.Text, myHash ));
             this.Hide();    
         }
 
