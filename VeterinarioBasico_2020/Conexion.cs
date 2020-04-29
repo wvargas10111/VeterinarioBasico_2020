@@ -44,6 +44,7 @@ namespace VeterinarioBasico_2020
                         return true;
                     }
 
+                    conexion.Close();
                     return false;
                 }
                 conexion.Close();
@@ -51,6 +52,7 @@ namespace VeterinarioBasico_2020
             }
             catch (MySqlException e)
             {
+                conexion.Close();
                 return false;
             }
         }
@@ -81,6 +83,7 @@ namespace VeterinarioBasico_2020
             }
             catch (MySqlException e)
             {
+                conexion.Close();
                 return "rrea esad ";
                 System.Diagnostics.Debug.WriteLine("hola22");
             }
