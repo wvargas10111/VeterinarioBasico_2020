@@ -28,6 +28,7 @@ namespace VeterinarioBasico_2020
         {
             try
             {
+                
                 conexion.Open();
                 MySqlCommand consulta =
                     new MySqlCommand("SELECT * FROM user WHERE  User_Name = @User_Name", conexion);
@@ -63,10 +64,10 @@ namespace VeterinarioBasico_2020
         {
              try
             {
-
+                
                 conexion.Open();
                 MySqlCommand consulta =
-                    new MySqlCommand("INSERT INTO user ( Name, Last_Name, Address, Phone_Number, Dni, Date_Birth, Pass) VALUES (@Name, @Last_Name,  @User_Name, @Address, @Phone_Number, @Dni, @Date_Birth, @Pass)", conexion);
+                    new MySqlCommand("INSERT INTO user ( Name, Last_Name, User_Name, Address, Phone_Number, Dni, Date_Birth, Pass) VALUES (@Name, @Last_Name,  @User_Name, @Address, @Phone_Number, @Dni, @Date_Birth, @Pass)", conexion);
                 consulta.Parameters.AddWithValue("@Name", Name);
                 consulta.Parameters.AddWithValue("@Last_Name", Last_Name);
                 consulta.Parameters.AddWithValue("@User_Name", User_Name);

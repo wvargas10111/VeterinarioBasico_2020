@@ -52,7 +52,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.UserWin = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -74,25 +74,74 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.textBoxNameUser = new System.Windows.Forms.TextBox();
+            this.textBoxDniUser = new System.Windows.Forms.TextBox();
+            this.textBoxPhoneUser = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.textBoxOwnerNaME = new System.Windows.Forms.TextBox();
+            this.textBoxCodPet = new System.Windows.Forms.TextBox();
+            this.textBoxPetName = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBoxPhoneOwner = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.textBox22 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.UserWin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.UserWin);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.ImageList = this.imageList1;
@@ -299,10 +348,12 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(17, 14);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(124, 111);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -346,26 +397,26 @@
             this.label1.TabIndex = 0;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // tabPage3
+            // UserWin
             // 
-            this.tabPage3.Controls.Add(this.dataGridView1);
-            this.tabPage3.Controls.Add(this.textBox10);
-            this.tabPage3.Controls.Add(this.textBox9);
-            this.tabPage3.Controls.Add(this.textBox8);
-            this.tabPage3.Controls.Add(this.button4);
-            this.tabPage3.Controls.Add(this.button3);
-            this.tabPage3.Controls.Add(this.button2);
-            this.tabPage3.Controls.Add(this.pictureBox3);
-            this.tabPage3.ImageIndex = 3;
-            this.tabPage3.Location = new System.Drawing.Point(4, 39);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage3.Size = new System.Drawing.Size(741, 405);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            this.UserWin.Controls.Add(this.dataGridView1);
+            this.UserWin.Controls.Add(this.textBoxPhoneUser);
+            this.UserWin.Controls.Add(this.textBoxDniUser);
+            this.UserWin.Controls.Add(this.textBoxNameUser);
+            this.UserWin.Controls.Add(this.button4);
+            this.UserWin.Controls.Add(this.button3);
+            this.UserWin.Controls.Add(this.button2);
+            this.UserWin.Controls.Add(this.pictureBox3);
+            this.UserWin.ImageIndex = 3;
+            this.UserWin.Location = new System.Drawing.Point(4, 39);
+            this.UserWin.Margin = new System.Windows.Forms.Padding(2);
+            this.UserWin.Name = "UserWin";
+            this.UserWin.Padding = new System.Windows.Forms.Padding(2);
+            this.UserWin.Size = new System.Drawing.Size(741, 405);
+            this.UserWin.TabIndex = 2;
+            this.UserWin.Text = "tabPage3";
+            this.UserWin.UseVisualStyleBackColor = true;
+            this.UserWin.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // imageList1
             // 
@@ -506,19 +557,23 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(31, 16);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(124, 111);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(248, 21);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(124, 111);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 20;
             this.pictureBox3.TabStop = false;
             // 
@@ -537,7 +592,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(230, 36);
             this.button3.TabIndex = 36;
-            this.button3.Text = "Create New Pet";
+            this.button3.Text = "New Vaccine";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -546,32 +601,32 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(230, 36);
             this.button4.TabIndex = 37;
-            this.button4.Text = "Create New Pet";
+            this.button4.Text = " New Appointment";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // textBox8
+            // textBoxNameUser
             // 
-            this.textBox8.Location = new System.Drawing.Point(215, 141);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(198, 21);
-            this.textBox8.TabIndex = 38;
-            this.textBox8.Text = " ";
+            this.textBoxNameUser.Location = new System.Drawing.Point(215, 141);
+            this.textBoxNameUser.Name = "textBoxNameUser";
+            this.textBoxNameUser.Size = new System.Drawing.Size(198, 21);
+            this.textBoxNameUser.TabIndex = 38;
+            this.textBoxNameUser.Text = " ";
             // 
-            // textBox9
+            // textBoxDniUser
             // 
-            this.textBox9.Location = new System.Drawing.Point(215, 168);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(198, 21);
-            this.textBox9.TabIndex = 39;
-            this.textBox9.Text = " ";
+            this.textBoxDniUser.Location = new System.Drawing.Point(215, 168);
+            this.textBoxDniUser.Name = "textBoxDniUser";
+            this.textBoxDniUser.Size = new System.Drawing.Size(198, 21);
+            this.textBoxDniUser.TabIndex = 39;
+            this.textBoxDniUser.Text = " ";
             // 
-            // textBox10
+            // textBoxPhoneUser
             // 
-            this.textBox10.Location = new System.Drawing.Point(215, 195);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(198, 21);
-            this.textBox10.TabIndex = 40;
-            this.textBox10.Text = " ";
+            this.textBoxPhoneUser.Location = new System.Drawing.Point(215, 195);
+            this.textBoxPhoneUser.Name = "textBoxPhoneUser";
+            this.textBoxPhoneUser.Size = new System.Drawing.Size(198, 21);
+            this.textBoxPhoneUser.TabIndex = 40;
+            this.textBoxPhoneUser.Text = " ";
             // 
             // dataGridView1
             // 
@@ -580,6 +635,371 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(585, 150);
             this.dataGridView1.TabIndex = 41;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.textBoxPhoneOwner);
+            this.tabPage4.Controls.Add(this.dataGridView2);
+            this.tabPage4.Controls.Add(this.textBoxOwnerNaME);
+            this.tabPage4.Controls.Add(this.textBoxCodPet);
+            this.tabPage4.Controls.Add(this.textBoxPetName);
+            this.tabPage4.Controls.Add(this.button5);
+            this.tabPage4.Controls.Add(this.button6);
+            this.tabPage4.Controls.Add(this.pictureBox4);
+            this.tabPage4.Location = new System.Drawing.Point(4, 39);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(741, 405);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(78, 272);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(585, 106);
+            this.dataGridView2.TabIndex = 49;
+            // 
+            // textBoxOwnerNaME
+            // 
+            this.textBoxOwnerNaME.Location = new System.Drawing.Point(227, 201);
+            this.textBoxOwnerNaME.Name = "textBoxOwnerNaME";
+            this.textBoxOwnerNaME.Size = new System.Drawing.Size(198, 21);
+            this.textBoxOwnerNaME.TabIndex = 48;
+            this.textBoxOwnerNaME.Text = " ";
+            // 
+            // textBoxCodPet
+            // 
+            this.textBoxCodPet.Location = new System.Drawing.Point(227, 174);
+            this.textBoxCodPet.Name = "textBoxCodPet";
+            this.textBoxCodPet.Size = new System.Drawing.Size(198, 21);
+            this.textBoxCodPet.TabIndex = 47;
+            this.textBoxCodPet.Text = " ";
+            // 
+            // textBoxPetName
+            // 
+            this.textBoxPetName.Location = new System.Drawing.Point(227, 147);
+            this.textBoxPetName.Name = "textBoxPetName";
+            this.textBoxPetName.Size = new System.Drawing.Size(198, 21);
+            this.textBoxPetName.TabIndex = 46;
+            this.textBoxPetName.Text = " ";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(409, 69);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(230, 36);
+            this.button5.TabIndex = 45;
+            this.button5.Text = "New Vaccine\r\n";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(409, 27);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(230, 36);
+            this.button6.TabIndex = 44;
+            this.button6.Text = " New Appointment";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(260, 27);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(124, 111);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 42;
+            this.pictureBox4.TabStop = false;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.textBox12);
+            this.tabPage5.Controls.Add(this.textBox13);
+            this.tabPage5.Controls.Add(this.textBox21);
+            this.tabPage5.Controls.Add(this.textBox22);
+            this.tabPage5.Controls.Add(this.label24);
+            this.tabPage5.Controls.Add(this.textBox14);
+            this.tabPage5.Controls.Add(this.label17);
+            this.tabPage5.Controls.Add(this.textBox15);
+            this.tabPage5.Controls.Add(this.label18);
+            this.tabPage5.Controls.Add(this.textBox16);
+            this.tabPage5.Controls.Add(this.label19);
+            this.tabPage5.Controls.Add(this.dataGridView3);
+            this.tabPage5.Controls.Add(this.pictureBox5);
+            this.tabPage5.Location = new System.Drawing.Point(4, 39);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(741, 405);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "tabPage5";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(18, 17);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(124, 111);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 43;
+            this.pictureBox5.TabStop = false;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(184, 47);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(481, 164);
+            this.dataGridView3.TabIndex = 50;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(275, 259);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(198, 21);
+            this.textBox14.TabIndex = 56;
+            this.textBox14.Text = " ";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(190, 262);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(57, 15);
+            this.label17.TabIndex = 55;
+            this.label17.Text = "Cod Pet";
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(254, 294);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(344, 21);
+            this.textBox15.TabIndex = 54;
+            this.textBox15.Text = " ";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(190, 294);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(57, 15);
+            this.label18.TabIndex = 53;
+            this.label18.Text = "Vaccine";
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(272, 229);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(198, 21);
+            this.textBox16.TabIndex = 52;
+            this.textBox16.Text = " ";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(190, 229);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(70, 15);
+            this.label19.TabIndex = 51;
+            this.label19.Text = "Pet Name";
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.textBox11);
+            this.tabPage6.Controls.Add(this.textBox10);
+            this.tabPage6.Controls.Add(this.textBox9);
+            this.tabPage6.Controls.Add(this.textBox8);
+            this.tabPage6.Controls.Add(this.label25);
+            this.tabPage6.Controls.Add(this.textBox20);
+            this.tabPage6.Controls.Add(this.label23);
+            this.tabPage6.Controls.Add(this.textBox17);
+            this.tabPage6.Controls.Add(this.label20);
+            this.tabPage6.Controls.Add(this.textBox18);
+            this.tabPage6.Controls.Add(this.label21);
+            this.tabPage6.Controls.Add(this.textBox19);
+            this.tabPage6.Controls.Add(this.label22);
+            this.tabPage6.Controls.Add(this.pictureBox6);
+            this.tabPage6.Location = new System.Drawing.Point(4, 39);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(741, 405);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "tabPage6";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(280, 105);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(198, 21);
+            this.textBox17.TabIndex = 63;
+            this.textBox17.Text = " ";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(195, 108);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(70, 15);
+            this.label20.TabIndex = 62;
+            this.label20.Text = "Pet Name";
+            // 
+            // textBox18
+            // 
+            this.textBox18.Location = new System.Drawing.Point(259, 140);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(344, 21);
+            this.textBox18.TabIndex = 61;
+            this.textBox18.Text = " ";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(195, 140);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(58, 15);
+            this.label21.TabIndex = 60;
+            this.label21.Text = "Species";
+            // 
+            // textBox19
+            // 
+            this.textBox19.Location = new System.Drawing.Point(277, 75);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(198, 21);
+            this.textBox19.TabIndex = 59;
+            this.textBox19.Text = " ";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(195, 75);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(64, 15);
+            this.label22.TabIndex = 58;
+            this.label22.Text = "Identifier";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(7, 15);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(124, 111);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 57;
+            this.pictureBox6.TabStop = false;
+            // 
+            // textBox20
+            // 
+            this.textBox20.Location = new System.Drawing.Point(280, 178);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(198, 21);
+            this.textBox20.TabIndex = 65;
+            this.textBox20.Text = " ";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(195, 181);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(56, 15);
+            this.label23.TabIndex = 64;
+            this.label23.Text = "Reason";
+            // 
+            // textBoxPhoneOwner
+            // 
+            this.textBoxPhoneOwner.Location = new System.Drawing.Point(227, 228);
+            this.textBoxPhoneOwner.Name = "textBoxPhoneOwner";
+            this.textBoxPhoneOwner.Size = new System.Drawing.Size(198, 21);
+            this.textBoxPhoneOwner.TabIndex = 50;
+            this.textBoxPhoneOwner.Text = " ";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(372, 17);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(68, 15);
+            this.label24.TabIndex = 57;
+            this.label24.Text = "Vaccines ";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(332, 21);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(94, 15);
+            this.label25.TabIndex = 66;
+            this.label25.Text = "Appointments";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(7, 140);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(110, 21);
+            this.textBox8.TabIndex = 67;
+            this.textBox8.Text = " ";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(7, 167);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(110, 21);
+            this.textBox9.TabIndex = 68;
+            this.textBox9.Text = " ";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(8, 194);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(110, 21);
+            this.textBox10.TabIndex = 69;
+            this.textBox10.Text = " ";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(8, 221);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(110, 21);
+            this.textBox11.TabIndex = 70;
+            this.textBox11.Text = " ";
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(19, 220);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(110, 21);
+            this.textBox12.TabIndex = 74;
+            this.textBox12.Text = " ";
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(19, 193);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(110, 21);
+            this.textBox13.TabIndex = 73;
+            this.textBox13.Text = " ";
+            // 
+            // textBox21
+            // 
+            this.textBox21.Location = new System.Drawing.Point(18, 166);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(110, 21);
+            this.textBox21.TabIndex = 72;
+            this.textBox21.Text = " ";
+            // 
+            // textBox22
+            // 
+            this.textBox22.Location = new System.Drawing.Point(18, 139);
+            this.textBox22.Name = "textBox22";
+            this.textBox22.Size = new System.Drawing.Size(110, 21);
+            this.textBox22.TabIndex = 71;
+            this.textBox22.Text = " ";
             // 
             // VentanaNewUser
             // 
@@ -599,11 +1019,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            this.UserWin.ResumeLayout(false);
+            this.UserWin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -614,7 +1045,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage UserWin;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.TextBox textBoxLastName;
         private System.Windows.Forms.Label label3;
@@ -651,13 +1082,51 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBoxPhoneUser;
+        private System.Windows.Forms.TextBox textBoxDniUser;
+        private System.Windows.Forms.TextBox textBoxNameUser;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TextBox textBoxPhoneOwner;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TextBox textBoxOwnerNaME;
+        private System.Windows.Forms.TextBox textBoxCodPet;
+        private System.Windows.Forms.TextBox textBoxPetName;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label25;
     }
 }
 
