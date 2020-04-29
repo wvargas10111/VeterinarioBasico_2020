@@ -25,10 +25,10 @@ namespace VeterinarioBasico_2020
         {
 
             
-            VentanaNewUser v = new VentanaNewUser();
-            v.Show();
-            this.Hide();
-            System.Diagnostics.Debug.WriteLine("hola1");
+            //VentanaNewUser v = new VentanaNewUser();
+            //v.Show();
+            //this.Hide();
+            //System.Diagnostics.Debug.WriteLine("hola1");
 
 
             if (conexion.compruebaUsr(textBoxUsr.Text , textBoxPass.Text))
@@ -36,9 +36,9 @@ namespace VeterinarioBasico_2020
 
 
 
-                //this.Hide();
-                //VentanaLogin v = new VentanaLogin();
-                //v.Show();
+                this.Hide();
+                VentanaLogin v = new VentanaLogin();
+                v.Show();
 
             }
             else
@@ -59,6 +59,12 @@ namespace VeterinarioBasico_2020
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            VentanaNewUser v = new VentanaNewUser();
+            v.Show();
         }
     }
 }

@@ -24,14 +24,13 @@ namespace VeterinarioBasico_2020
             }
         }
 
-        public Boolean compruebaUsr( string User_Name, string Pass)
+        public Boolean compruebaUsr( String User_Name, String Pass)
         {
             try
             {
                 conexion.Open();
                 MySqlCommand consulta =
                     new MySqlCommand("SELECT * FROM user WHERE  User_Name = @User_Name", conexion);
-               
                 consulta.Parameters.AddWithValue("@User_Name", User_Name);
 
                 MySqlDataReader resultado = consulta.ExecuteReader();
@@ -44,28 +43,28 @@ namespace VeterinarioBasico_2020
 
                         return true;
                     }
+
+                    return false;
                 }
                 conexion.Close();
                 return false;
             }
             catch (MySqlException e)
             {
-
                 return false;
             }
         }
 
        
 
-        public String addUser(string Name, string Last_Name, string User_Name, string Address, string Phone_Number, string Dni, string Date_Birth, string Pass, string myHash)
+        public String addUser(String Name, String Last_Name, String User_Name, String Address, String Phone_Number, String Dni, String Date_Birth, String Pass)
         {
-        
-            try
+             try
             {
 
                 conexion.Open();
                 MySqlCommand consulta =
-                    new MySqlCommand("INSERT INTO `user` (` Name`, `Last_Name`, `Address`, `Phone_Number`, `Dni, Date_Birth`, `Pass`) VALUES ('" + Name + "','" + Last_Name + "', '"+ User_Name +"', '" + Address + "', '" + Phone_Number + "', '" + Dni + "', '" + Date_Birth + "','" + Pass + "')", conexion);
+                    new MySqlCommand("INSERT INTO user ( Name, Last_Name, Address, Phone_Number, Dni, Date_Birth, Pass) VALUES (@Name, @Last_Name,  @User_Name, @Address, @Phone_Number, @Dni, @Date_Birth, @Pass)", conexion);
                 consulta.Parameters.AddWithValue("@Name", Name);
                 consulta.Parameters.AddWithValue("@Last_Name", Last_Name);
                 consulta.Parameters.AddWithValue("@User_Name", User_Name);

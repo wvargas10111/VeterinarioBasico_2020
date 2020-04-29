@@ -15,9 +15,6 @@ namespace VeterinarioBasico_2020
     public partial class VentanaNewUser : Form
 
     {
-
-
-
         Conexion conexion = new Conexion();
         public VentanaNewUser()
         {
@@ -46,21 +43,106 @@ namespace VeterinarioBasico_2020
 
         private void buttonCreaUser_Click(object sender, EventArgs e)
         {
-           
-            string myHash = BCrypt.Net.BCrypt.HashPassword(textBoxUserName.Text, BCrypt.Net.BCrypt.GenerateSalt());
-            MessageBox.Show(conexion.addUser(textBoxName.Text, textBoxLastName.Text, textBoxUserName.Text, textBoxAddress.Text, textBoxPhone.Text, textBoxDni.Text, textBoxDate.Text, textBoxPass.Text, myHash ));
-            this.Hide();    
+            String textPass = textBoxPass.Text;
+            string myHash = BCrypt.Net.BCrypt.HashPassword(textPass, BCrypt.Net.BCrypt.GenerateSalt());
+            MessageBox.Show(conexion.addUser(textBoxName.Text, textBoxLastName.Text, textBoxUserName.Text, textBoxAddress.Text, textBoxPhone.Text, textBoxDni.Text, textBoxDate.Text,  myHash));
+               
         }
 
-        private void VentanaPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Application.Exit();
+
         }
 
+        private void textBoxUserName_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxDni_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxDate_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxAddress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxPhone_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxLastName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
-
-    
-
-
+   
 }
