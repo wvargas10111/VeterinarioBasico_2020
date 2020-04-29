@@ -40,7 +40,7 @@ namespace VeterinarioBasico_2020
                     string passWithHash = resultado.GetString("Pass");
                     if (BCrypt.Net.BCrypt.Verify(Pass, passWithHash))
                     {
-
+                        conexion.Close();
                         return true;
                     }
 
@@ -82,6 +82,7 @@ namespace VeterinarioBasico_2020
             catch (MySqlException e)
             {
                 return "rrea esad ";
+                System.Diagnostics.Debug.WriteLine("hola22");
             }
         }
 
