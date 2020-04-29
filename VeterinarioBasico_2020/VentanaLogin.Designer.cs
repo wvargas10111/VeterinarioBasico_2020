@@ -42,14 +42,14 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(174, 19);
             this.label1.TabIndex = 0;
-            this.label1.Text = "USUARIO";
+            this.label1.Text = "USER NAME";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBoxUsr
             // 
             this.textBoxUsr.Location = new System.Drawing.Point(81, 89);
-            this.textBoxUsr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxUsr.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxUsr.Name = "textBoxUsr";
             this.textBoxUsr.Size = new System.Drawing.Size(175, 20);
             this.textBoxUsr.TabIndex = 1;
@@ -57,7 +57,7 @@
             // textBoxPass
             // 
             this.textBoxPass.Location = new System.Drawing.Point(81, 185);
-            this.textBoxPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPass.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPass.Name = "textBoxPass";
             this.textBoxPass.Size = new System.Drawing.Size(175, 20);
             this.textBoxPass.TabIndex = 3;
@@ -65,7 +65,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(81, 275);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(174, 47);
             this.button1.TabIndex = 4;
@@ -80,7 +80,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(174, 19);
             this.label2.TabIndex = 5;
-            this.label2.Text = "CONTRASEÑA";
+            this.label2.Text = "PASSWORD";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // VentanaLogin
@@ -94,7 +94,7 @@
             this.Controls.Add(this.textBoxUsr);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "VentanaLogin";
             this.Text = "VentanaLogin";

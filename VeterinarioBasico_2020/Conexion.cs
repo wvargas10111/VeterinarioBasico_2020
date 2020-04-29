@@ -10,6 +10,7 @@ namespace VeterinarioBasico_2020
     class Conexion
 
     {
+        
         public MySqlConnection conexion;
             public Conexion()
         {
@@ -23,37 +24,38 @@ namespace VeterinarioBasico_2020
             }
         }
 
-        public Boolean compruebaUsr(string Dni, string Pass)
+        public Boolean compruebaUsr( string User_Name, string Pass)
         {
             try
             {
                 conexion.Open();
-                MySqlCommand consulta = 
-                    new MySqlCommand("SELECT * FROM user WHERE dni = @Dni", conexion);
-                consulta.Parameters.AddWithValue("@Dni", Dni);
-                
+                MySqlCommand consulta =
+                    new MySqlCommand("SELECT * FROM user WHERE  User_Name = @User_Name", conexion);
+               
+                consulta.Parameters.AddWithValue("@User_Name", User_Name);
 
                 MySqlDataReader resultado = consulta.ExecuteReader();
 
                 if (resultado.Read())
                 {
-                    String passWithHash = resultado.GetString("Pass");
+                    string passWithHash = resultado.GetString("Pass");
+                    if (BCrypt.Net.BCrypt.Verify(Pass, passWithHash))
+                    {
 
-                    conexion.Close();
-                    return BCrypt.Net.BCrypt.Verify(Pass, passWithHash);
+                        return true;
+                    }
                 }
                 conexion.Close();
                 return false;
-               
             }
             catch (MySqlException e)
             {
-                
+
                 return false;
             }
         }
 
-        public String addUser(String Name, String Last_Name, String User_Name, String Address, String Phone_Number, String Dni, String Date_Birth, String Pass)
+        public String addUser(string Name, string Last_Name, string User_Name, string Address, string Phone_Number, string Dni, string Date_Birth, string Pass, string myHash)
         {
         
             try
@@ -61,7 +63,7 @@ namespace VeterinarioBasico_2020
 
                 conexion.Open();
                 MySqlCommand consulta =
-                    new MySqlCommand("INSERT INTO user ( Name, Last_Name, Address, Phone_Number, Dni, Date_Birth, Pass) VALUES (@Name, @Last_Name, @User_Name, @Address, @Phone_Number, @Dni, @Date_Birth, @Pass)", conexion);
+                    new MySqlCommand("INSERT INTO `user` (` Name`, `Last_Name`, `Address`, `Phone_Number`, `Dni, Date_Birth`, `Pass`) VALUES ('" + Name + "','" + Last_Name + "', '"+ User_Name +"', '" + Address + "', '" + Phone_Number + "', '" + Dni + "', '" + Date_Birth + "','" + Pass + "')", conexion);
                 consulta.Parameters.AddWithValue("@Name", Name);
                 consulta.Parameters.AddWithValue("@Last_Name", Last_Name);
                 consulta.Parameters.AddWithValue("@User_Name", User_Name);
@@ -78,7 +80,7 @@ namespace VeterinarioBasico_2020
             }
             catch (MySqlException e)
             {
-                return "error";
+                return "rrea esad ";
             }
         }
 

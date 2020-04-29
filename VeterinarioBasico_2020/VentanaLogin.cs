@@ -23,23 +23,29 @@ namespace VeterinarioBasico_2020
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (conexion.compruebaUsr(textBoxUsr.Text, textBoxPass.Text))
+
+            
+            VentanaNewUser v = new VentanaNewUser();
+            v.Show();
+            this.Hide();
+            System.Diagnostics.Debug.WriteLine("hola1");
+
+
+            if (conexion.compruebaUsr(textBoxUsr.Text , textBoxPass.Text))
             {
+
+
+
                 //this.Hide();
-                //VentanaPrincipal v = new VentanaPrincipal();
+                //VentanaLogin v = new VentanaLogin();
                 //v.Show();
 
-
-                this.Hide();
-                VentanaPrincipal v = new VentanaPrincipal();
-                v.Show();
-                
             }
             else
             {
-               
-                
 
+
+                System.Diagnostics.Debug.WriteLine("hola22");
                 MessageBox.Show("Usuario o contraseña incorrectos");
 
             }

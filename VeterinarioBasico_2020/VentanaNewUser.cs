@@ -12,10 +12,14 @@ using MySql.Data.MySqlClient.Authentication;
 
 namespace VeterinarioBasico_2020
 {
-    public partial class VentanaPrincipal : Form
+    public partial class VentanaNewUser : Form
+
     {
+
+
+
         Conexion conexion = new Conexion();
-        public VentanaPrincipal()
+        public VentanaNewUser()
         {
             InitializeComponent();
         }
@@ -42,14 +46,21 @@ namespace VeterinarioBasico_2020
 
         private void buttonCreaUser_Click(object sender, EventArgs e)
         {
-            String textPass = textBoxPass.Text;
-            string myHash = BCrypt.Net.BCrypt.HashPassword(textPass, BCrypt.Net.BCrypt.GenerateSalt());
-
-            MessageBox.Show(conexion.addUser(textBoxName.Text, textBoxLastName.Text, textBoxUserName.Text, textBoxAddress.Text, textBoxPhone.Text, textBoxDni.Text, textBoxDate.Text, textBoxPass.Text));
+           
+            string myHash = BCrypt.Net.BCrypt.HashPassword(textBoxUserName.Text, BCrypt.Net.BCrypt.GenerateSalt());
+            MessageBox.Show(conexion.addUser(textBoxName.Text, textBoxLastName.Text, textBoxUserName.Text, textBoxAddress.Text, textBoxPhone.Text, textBoxDni.Text, textBoxDate.Text, textBoxPass.Text myHash));
+            this.Hide();    
         }
+
+        private void VentanaPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+
     }
 
-  
+    
 
 
 }
