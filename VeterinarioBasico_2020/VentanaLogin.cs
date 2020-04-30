@@ -37,7 +37,7 @@ namespace VeterinarioBasico_2020
 
 
                 this.Hide();
-                VentanaLogin v = new VentanaLogin();
+                VentanaUser v = new VentanaUser();
                 v.Show();
 
             }

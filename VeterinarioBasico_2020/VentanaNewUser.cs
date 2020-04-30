@@ -143,6 +143,16 @@ namespace VeterinarioBasico_2020
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(conexion.addPet(textBoxPetName.Text, textBoxSpecies.Text, textBoxRace.Text, textBoxSex.Text, textBoxOwner.Text, textBoxDateBirthDog.Text));
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
    
 }

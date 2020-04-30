@@ -86,6 +86,12 @@
     <Compile Include="VentanaLogin.Designer.cs">
       <DependentUpon>VentanaLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="VentanaUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaUser.Designer.cs">
+      <DependentUpon>VentanaUser.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="VentanaNewUser.resx">
       <DependentUpon>VentanaNewUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +106,9 @@
     </Compile>
     <EmbeddedResource Include="VentanaLogin.resx">
       <DependentUpon>VentanaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaUser.resx">
+      <DependentUpon>VentanaUser.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

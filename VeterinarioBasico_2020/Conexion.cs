@@ -41,11 +41,11 @@ namespace VeterinarioBasico_2020
                     string passWithHash = resultado.GetString("Pass");
                     if (BCrypt.Net.BCrypt.Verify(Pass, passWithHash))
                     {
-                        conexion.Close();
+                        
                         return true;
                     }
 
-                    conexion.Close();
+                    
                     return false;
                 }
                 conexion.Close();
@@ -85,8 +85,38 @@ namespace VeterinarioBasico_2020
             catch (MySqlException e)
             {
                 conexion.Close();
-                return "rrea esad ";
-                System.Diagnostics.Debug.WriteLine("hola22");
+                return "error";
+                
+            }
+        }
+
+        public String addPet( String Pet_Name, String Species, String Race, String Sex, String Owner, String Date_Birth)
+        {
+            try
+            {
+
+                conexion.Open();
+                MySqlCommand consulta =
+                    new MySqlCommand("INSERT INTO pet ( Cod_Pet, Pet_Name, Species, Race, Sex, Owner, Date_Birth) VALUES (NULL, @Pet_Name, @Species, @Race, @Sex, @Owner, @Date_Birth)", conexion);
+
+                consulta.Parameters.AddWithValue("@Pet_Name", Pet_Name);
+                consulta.Parameters.AddWithValue("@Species", Species);
+                consulta.Parameters.AddWithValue("@Race", Race);
+                consulta.Parameters.AddWithValue("@Sex", Sex);
+                consulta.Parameters.AddWithValue("@Owner", Owner);
+                consulta.Parameters.AddWithValue("@Date_Birth", Date_Birth);
+                
+
+                consulta.ExecuteNonQuery();
+
+                conexion.Close();
+                return "ok";
+            }
+            catch (MySqlException e)
+            {
+                conexion.Close();
+                return "error";
+                
             }
         }
 
