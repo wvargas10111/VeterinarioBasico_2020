@@ -120,6 +120,64 @@ namespace VeterinarioBasico_2020
             }
         }
 
+        public String addVaccine(String Cod_Pet, String Pet_Name, String Vaccine_Type)
+        {
+            try
+            {
+
+                conexion.Open();
+                MySqlCommand consulta =
+                    new MySqlCommand("INSERT INTO vaccines (Cod_Vac, Cod_Pet, Pet_Name, Vaccine_Type) VALUES (NULL, @Cod_Pet, @Pet_Name, @Vaccine_Type)", conexion);
+
+                
+                consulta.Parameters.AddWithValue("@Cod_Pet", Cod_Pet);
+                consulta.Parameters.AddWithValue("@Pet_Name", Pet_Name);
+                consulta.Parameters.AddWithValue("@Vaccine_Type", Vaccine_Type);
+                
+
+
+                consulta.ExecuteNonQuery();
+
+                conexion.Close();
+                return "ok";
+            }
+            catch (MySqlException e)
+            {
+                conexion.Close();
+                return "error";
+
+            }
+        }
+
+        public String addAppointment(String User_Dni, String Pet_Name, String Reason)
+        {
+            try
+            {
+
+                conexion.Open();
+                MySqlCommand consulta =
+                    new MySqlCommand("INSERT INTO appointment (Cod_Appointment, User_Dni, Pet_Name, Reason ) VALUES (NULL, @User_Dni, @Pet_Name, @Reason)", conexion);
+
+
+                consulta.Parameters.AddWithValue("@User_Dni", User_Dni);
+                consulta.Parameters.AddWithValue("@Pet_Name", Pet_Name);
+                consulta.Parameters.AddWithValue("@Reason", Reason);
+
+
+
+                consulta.ExecuteNonQuery();
+
+                conexion.Close();
+                return "ok";
+            }
+            catch (MySqlException e)
+            {
+                conexion.Close();
+                return "error";
+
+            }
+        }
+
 
 
     }
