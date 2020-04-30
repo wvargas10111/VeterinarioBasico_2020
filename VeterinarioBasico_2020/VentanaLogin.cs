@@ -65,6 +65,7 @@ namespace VeterinarioBasico_2020
         {
             VentanaNewUser v = new VentanaNewUser();
             v.Show();
+            
         }
     }
 }

@@ -46,7 +46,12 @@ namespace VeterinarioBasico_2020
             String textPass = textBoxPass.Text;
             string myHash = BCrypt.Net.BCrypt.HashPassword(textPass, BCrypt.Net.BCrypt.GenerateSalt());
             MessageBox.Show(conexion.addUser(textBoxName.Text, textBoxLastName.Text, textBoxUserName.Text, textBoxAddress.Text, textBoxPhone.Text, textBoxDni.Text, textBoxDate.Text,  myHash));
-               
+            this.Close();
+        }
+
+        private void VentanaNewUser_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -147,6 +152,7 @@ namespace VeterinarioBasico_2020
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show(conexion.addPet(textBoxPetName.Text, textBoxSpecies.Text, textBoxRace.Text, textBoxSex.Text, textBoxOwner.Text, textBoxDateBirthDog.Text));
+            this.Close();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
