@@ -197,5 +197,47 @@ namespace VeterinarioBasico_2020
             }
         }
 
+        public DataTable myVac()
+        {
+            try
+            {
+                conexion.Open();
+                MySqlCommand consulta =
+                    new MySqlCommand("SELECT * FROM vaccines", conexion);
+                MySqlDataReader resultado = consulta.ExecuteReader();
+                DataTable vaccine = new DataTable();
+                vaccine.Load(resultado);
+                conexion.Close();
+                return vaccine;
+
+            }
+            catch (MySqlException e)
+            {
+                throw e;
+            }
+        }
+
+        public DataTable myApps()
+        {
+            try
+            {
+                conexion.Open();
+                MySqlCommand consulta =
+                    new MySqlCommand("SELECT * FROM appointment", conexion);
+                MySqlDataReader resultado = consulta.ExecuteReader();
+                DataTable app = new DataTable();
+                app.Load(resultado);
+                conexion.Close();
+                return app;
+
+            }
+            catch (MySqlException e)
+            {
+                throw e;
+            }
+        }
+
+
+
     }
 }

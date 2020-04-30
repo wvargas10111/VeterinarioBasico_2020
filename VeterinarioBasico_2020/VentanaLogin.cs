@@ -15,7 +15,7 @@ namespace VeterinarioBasico_2020
     public partial class VentanaLogin : Form
     { 
         Conexion conexion = new Conexion();
-    
+        public DataTable tablaUsuario = new DataTable();
         public VentanaLogin()
         {
             InitializeComponent();
@@ -25,10 +25,7 @@ namespace VeterinarioBasico_2020
         {
 
             
-            //VentanaNewUser v = new VentanaNewUser();
-            //v.Show();
-            //this.Hide();
-            //System.Diagnostics.Debug.WriteLine("hola1");
+           
 
 
             if (conexion.compruebaUsr(textBoxUsr.Text , textBoxPass.Text))
