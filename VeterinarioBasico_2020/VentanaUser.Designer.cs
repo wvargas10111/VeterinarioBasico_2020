@@ -70,11 +70,12 @@
             this.label21 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.richTextBoxReason = new System.Windows.Forms.RichTextBox();
             this.buttonAddVac = new System.Windows.Forms.Button();
             this.buttonAddAppointment = new System.Windows.Forms.Button();
             this.textBoxPetNameApp = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
+            this.richTextBoxReason = new System.Windows.Forms.RichTextBox();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -86,6 +87,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -105,6 +107,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.dataGridView3);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.button7);
             this.tabPage1.Controls.Add(this.button8);
@@ -120,7 +123,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(219, 245);
+            this.button1.Location = new System.Drawing.Point(15, 249);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(230, 36);
             this.button1.TabIndex = 53;
@@ -129,7 +132,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(219, 203);
+            this.button7.Location = new System.Drawing.Point(15, 207);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(230, 36);
             this.button7.TabIndex = 52;
@@ -138,7 +141,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(270, 167);
+            this.button8.Location = new System.Drawing.Point(66, 171);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(140, 30);
             this.button8.TabIndex = 51;
@@ -148,7 +151,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(286, 37);
+            this.pictureBox1.Location = new System.Drawing.Point(82, 41);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(124, 111);
@@ -382,10 +385,10 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.richTextBoxReason);
             this.tabPage4.Controls.Add(this.textBoxPetNameApp);
             this.tabPage4.Controls.Add(this.label20);
             this.tabPage4.Controls.Add(this.buttonAddAppointment);
-            this.tabPage4.Controls.Add(this.richTextBoxReason);
             this.tabPage4.Controls.Add(this.textBox11);
             this.tabPage4.Controls.Add(this.textBox10);
             this.tabPage4.Controls.Add(this.textBox9);
@@ -448,7 +451,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(314, 223);
+            this.label23.Location = new System.Drawing.Point(314, 221);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(50, 13);
             this.label23.TabIndex = 78;
@@ -492,14 +495,6 @@
             this.imageList1.Images.SetKeyName(3, "vaccines.png");
             this.imageList1.Images.SetKeyName(4, "appontment.png");
             // 
-            // richTextBoxReason
-            // 
-            this.richTextBoxReason.Location = new System.Drawing.Point(399, 223);
-            this.richTextBoxReason.Name = "richTextBoxReason";
-            this.richTextBoxReason.Size = new System.Drawing.Size(208, 116);
-            this.richTextBoxReason.TabIndex = 85;
-            this.richTextBoxReason.Text = "";
-            // 
             // buttonAddVac
             // 
             this.buttonAddVac.Location = new System.Drawing.Point(451, 344);
@@ -537,6 +532,22 @@
             this.label20.TabIndex = 90;
             this.label20.Text = "Pet Name";
             // 
+            // richTextBoxReason
+            // 
+            this.richTextBoxReason.Location = new System.Drawing.Point(399, 218);
+            this.richTextBoxReason.Name = "richTextBoxReason";
+            this.richTextBoxReason.Size = new System.Drawing.Size(208, 109);
+            this.richTextBoxReason.TabIndex = 93;
+            this.richTextBoxReason.Text = "";
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(275, 41);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(484, 264);
+            this.dataGridView3.TabIndex = 54;
+            // 
             // VentanaUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -560,6 +571,7 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -606,10 +618,11 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.RichTextBox richTextBoxReason;
         private System.Windows.Forms.Button buttonAddVac;
         private System.Windows.Forms.Button buttonAddAppointment;
         private System.Windows.Forms.TextBox textBoxPetNameApp;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.RichTextBox richTextBoxReason;
+        private System.Windows.Forms.DataGridView dataGridView3;
     }
 }

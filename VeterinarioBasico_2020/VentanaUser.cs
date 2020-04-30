@@ -14,22 +14,32 @@ namespace VeterinarioBasico_2020
     {
 
         Conexion conexion = new Conexion();
+        DataTable pets = new DataTable();
 
         public VentanaUser()
         {
             InitializeComponent();
+                     
+            dataGridView3.DataSource = conexion.myPets();
+            dataGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            dataGridView3.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
         }
 
         private void buttonAddVac_Click(object sender, EventArgs e)
         {
             MessageBox.Show(conexion.addVaccine(textBoxCodPetVac.Text, textBoxPetNameVac.Text, textBoxVaccine.Text));
-            this.Close();
+            
         }
 
         private void buttonAddAppointment_Click(object sender, EventArgs e)
         {
             MessageBox.Show(conexion.addAppointment(textBoxUserDniApp.Text, textBoxPetNameApp.Text, richTextBoxReason.Text));
-            this.Close();
+            
+        }
+
+        private void textBoxReason_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -178,7 +179,23 @@ namespace VeterinarioBasico_2020
             }
         }
 
-
+        public DataTable myPets()
+        {
+            try
+            {
+                conexion.Open();
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM pet", conexion);
+                MySqlDataReader result = consulta.ExecuteReader();
+                DataTable pets = new DataTable();
+                pets.Load(result);
+                conexion.Close();
+                return pets;
+            }
+            catch (MySqlException e)
+            {
+                throw e;
+            }
+        }
 
     }
 }
